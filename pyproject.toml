@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-liteyukibot"
-version = "0.1.1"
+version = "0.1.3"
 description = "nonebot-plugin-liteyukibot"
 readme = "README.md"
 requires-python = ">=3.10, <4.0"
@@ -9,7 +9,7 @@ authors = [
 ]
 dependencies = [
     "liteyukibot>=6.3.5.dev20240818001255",
-    "nonebot2[fastapi,httpx,websockts]>=2.3.2",
+    "nonebot2[fastapi,httpx,websockts]>=2.3.3",
     "GitPython>=3.1.43",
     "nb-cli>=1.4.1",
     "requests>=2.32.3",
