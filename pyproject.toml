@@ -8,10 +8,10 @@ authors = [
     { name = "snowykami", email = "snowykami@outlook.com" }
 ]
 dependencies = [
-    "liteyukibot>=6.3.5.dev20240818001255",
-    "nonebot2~=2.3.3",
+    "nonebot2>=2.3.3",
     "GitPython>=3.1.43",
     "aiohttp>=3.10.4",
+    "liteyukibot>=6.3.6",
 ]
 
 [tool.nonebot]
