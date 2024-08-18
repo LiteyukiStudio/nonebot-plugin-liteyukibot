@@ -10,6 +10,9 @@ authors = [
 dependencies = [
     "liteyukibot>=6.3.5.dev20240818001255",
     "nonebot2[fastapi,httpx,websockts]>=2.3.2",
+    "GitPython>=3.1.43",
+    "nb-cli>=1.4.1",
+    "requests>=2.32.3",
 ]
 
 [tool.nonebot]

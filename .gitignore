@@ -142,4 +142,6 @@ dmypy.json
 
 pdm.lock
 
+data
+
 # End of https://www.toptal.com/developers/gitignore/api/python
