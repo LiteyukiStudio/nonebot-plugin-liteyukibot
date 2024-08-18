@@ -1,0 +1,35 @@
+[project]
+name = "nonebot-plugin-liteyukibot"
+version = "0.1.0"
+description = "nonebot-plugin-liteyukibot"
+readme = "README.md"
+requires-python = ">=3.10, <4.0"
+authors = [
+    { name = "snowykami", email = "snowykami@outlook.com" }
+]
+dependencies = [
+    "liteyukibot>=6.3.5.dev20240818001255",
+    "nonebot2[fastapi,httpx,websockts]>=2.3.2",
+]
+
+[tool.nonebot]
+adapters = [
+
+]
+plugins = ["nonebot_plugin_liteyukibot"]
+plugin_dirs = []
+builtin_plugins = []
+
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+include_packages = ["liteyukibot"]
