@@ -5,16 +5,16 @@
 
 <div align="center">
 
-# liteyukibot-plugin-nonebot
+# nonebot-plugin-liteyukibot
 
 _✨ 在NoneBot中使用轻雪 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/LiteyukiStudio/nonebot-plugin-acgnshow.svg" alt="license">
+    <img src="https://img.shields.io/github/license/LiteyukiStudio/nonebot-plugin-liteyukibot.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/liteyukibot-plugin-nonebot">
-    <img src="https://img.shields.io/pypi/v/liteyukibot-plugin-nonebot.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-liteyukibot">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-liteyukibot.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
 
@@ -22,15 +22,23 @@ _✨ 在NoneBot中使用轻雪 ✨_
 
 ## 📖 介绍
 
-一个简单的 liteyukibot 插件，可以为你的机器人提供 NoneBot 支持，有一定NoneBot基础即可从原有的NoneBot迁移到轻雪
+在NoneBot机器人中使用[轻雪机器人](https://bot.liteyuki.icu)的功能！
 
 ## 💿 安装
+
+<details open>
+<summary>使用 nb-cli 安装(推荐，需先安装`nb-cli`)</summary>
+在 轻雪 项目的根目录下打开命令行, 输入以下指令即可安装
+
+    nb plugin install nonebot-plugin-liteyukibot
+
+</details>
 
 <details open>
 <summary>使用 pip 安装</summary>
 在 轻雪 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    pip install liteyukibot-plugin-nonebot
+    pip install nonebot-plugin-liteyukibot
 
 </details>
 
@@ -41,89 +49,43 @@ _✨ 在NoneBot中使用轻雪 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install liteyukibot-plugin-nonebot
+    pip install nonebot-plugin-liteyukibot
 
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add liteyukibot-plugin-nonebot
+    pdm add nonebot-plugin-liteyukibot
 
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add liteyukibot-plugin-nonebot
+    poetry add nonebot-plugin-liteyukibot
 
 </details>
 <details>
 <summary>conda</summary>
 
-    conda install liteyukibot-plugin-nonebot
+    conda install nonebot-plugin-liteyukibot
 
 </details>
 </details>
-
-
 
 ## 🎉 使用
 
-### 仅运行此插件(开发测试)
+- 使用`nb-cli`安装的插件默认加载，无需额外配置
+- 包管理器手动安装需在`pyproject.toml`中添加如下配置
+- 详细用法请访问[轻雪主页](https://bot.liteyuki.icu)
 
-> 运行入口文件
-
-```shell
-python main.py
+```toml
+plugins = ["nonebot_plugin_liteyukibot"]
 ```
-
-> 或自行通过开发工具运行
-
-```python
-from liteyuki.dev.plugin import run_plugins
-
-if __name__ == "__main__":
-    run_plugins("liteyukibot_plugin_nonebot")
-```
-
-### 装载到机器人程式运行(生产环境)
-
-在轻雪配置文件中添加如下结构配置其一，使轻雪知晓应加载此插件
-
-> 扁平化配置项(推荐在少量配置时使用)
-
-```yaml
-liteyuki.plugins: [ ..., "liteyukibot_plugin_nonebot" ]
-
-```
-
-> 普通配置项(在主要配置文件中使用)
-
-```yaml
-liteyuki:
-  plugins:
-    ...
-    - liteyukibot_plugin_nonebot
-```
-
-此插件默认装载`nonebot-adapter-onebot`适配器和`fastapi`，`httpx`及`websockets`三个常用驱动器，可根据需求进行配置或二次分发使用
-
-安装其他NoneBot商店推荐使用轻雪的NoneBot插件`npm`
 
 ## ⚙️ 配置
 
-参考LiteyukiBot的[配置文档](https://bot.liteyuki.icu/deploy/config.html)，在config下新建配置文件`nonebot.yml/toml/json`(你可自行命名)，填入如下结构配置文件，这里使用yaml
-
-```yaml
-nonebot:
-  host: 127.0.0.1 # 监听地址，外部访问请设置为0.0.0.0
-  port: 8080  # 自定义端口
-  command_start: [ "", "/" ]  # 命令前缀
-  superusers: [ "0000" ]  # 你的用户id
-  nickname: [ "liteyuki" ]  # 你的机器人昵称
-
-liteyuki:
-  reload: true # 轻雪开发模式 运行时重载 启用后修改nonebot插件后可重载插件
-```
+在插件运行模式下无需配置太多内容，如果需要配置，请 参考LiteyukiBot的[配置文档](https://bot.liteyuki.icu/deploy/config.html)，
+在config下新建配置文件`nonebot.yml/toml/json`(你可自行命名)，填入如下结构配置文件，这里使用yaml
 
 ## ℹ️ 其他
 
@@ -132,5 +94,3 @@ liteyuki:
 - 如果你是基于[轻雪框架](https://pypi.org/project/liteyukibot/)二次开发，需要手动安装
 
 - 该插件仍然有许多内容需要完善，欢迎各位的建议及贡献
-
-- 感谢[NoneBot](https://nonebot.dev/)提供的框架支持

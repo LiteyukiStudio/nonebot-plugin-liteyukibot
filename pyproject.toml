@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-liteyukibot"
-version = "0.1.0"
+version = "0.1.1"
 description = "nonebot-plugin-liteyukibot"
 readme = "README.md"
 requires-python = ">=3.10, <4.0"
