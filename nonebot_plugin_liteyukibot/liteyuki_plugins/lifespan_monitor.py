@@ -10,10 +10,11 @@
 import asyncio
 
 from liteyuki import get_bot, logger
-from liteyuki.plugin import PluginMetadata
+from liteyuki.plugin import PluginMetadata, PluginType
 
 __plugin_meta__ = PluginMetadata(
     name="生命周期日志",
+    type=PluginType.TEST
 )
 
 bot = get_bot()

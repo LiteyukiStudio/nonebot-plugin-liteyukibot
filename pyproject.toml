@@ -11,11 +11,13 @@ dependencies = [
     "nonebot2>=2.3.3",
     "GitPython>=3.1.43",
     "aiohttp>=3.10.4",
-    "liteyukibot>=6.3.6",
+    "liteyukibot>=6.3.8",
+    "nonebot-adapter-onebot>=2.4.4",
 ]
 
 [tool.nonebot]
 adapters = [
+    {name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11"}
 
 ]
 plugins = ["nonebot_plugin_liteyukibot"]
