@@ -7,7 +7,7 @@
 
 # nonebot-plugin-liteyukibot
 
-_✨ 在NoneBot中使用轻雪 ✨_
+_✨ 在NoneBot中使用轻雪及轻雪插件 ✨_
 
 
 <a href="./LICENSE">
@@ -94,3 +94,5 @@ plugins = ["nonebot_plugin_liteyukibot"]
 - 如果你是基于[轻雪框架](https://pypi.org/project/liteyukibot/)二次开发，需要手动安装
 
 - 该插件仍然有许多内容需要完善，欢迎各位的建议及贡献
+
+- ⚠ 警告：请勿在轻雪机器人中安装`liteyukibot-plugin-nonebot`后在NoneBot中安装`nonebot-plugin-liteyukibot`，否则会导致循环加载和冲突
