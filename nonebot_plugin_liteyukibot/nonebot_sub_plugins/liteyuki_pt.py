@@ -6,7 +6,7 @@ liteyuki_posts_and_telecommunications.py
 
 from nonebot import Bot, get_bot, on_message
 from nonebot.plugin import PluginMetadata
-from nonebot.adapters.onebot.v11 import MessageEvent, Bot
+from nonebot.adapters.onebot.v11 import MessageEvent, Bot, PRIVATE_FRIEND, GROUP_MEMBER
 from liteyuki.comm.storage import shared_memory
 from liteyuki.message.event import Event as LiteyukiEvent
 
@@ -16,8 +16,10 @@ __plugin_meta__ = PluginMetadata(
     usage="用户无需使用",
 )
 
+on_any_msg = on_message(permission=PRIVATE_FRIEND | GROUP_MEMBER)
 
-@on_message().handle()
+
+@on_any_msg.handle()
 async def _(bot: Bot, event: MessageEvent):
     liteyuki_event = LiteyukiEvent(
         type=event.message_type,

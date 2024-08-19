@@ -9,8 +9,6 @@ from liteyuki.config import load_config_in_default
 from nonebot import get_driver
 from nonebot.plugin import PluginMetadata, load_plugin as nonebot_load_plugin
 
-from .nonebot_sub_plugins import liteyuki_pt
-
 from .manager import process_manager
 
 __plugin_meta__ = PluginMetadata(
@@ -36,3 +34,6 @@ async def _():
     for plg_ in liteyuki_plugins:
         liteyuki_load_plugin(LITEYUKI_MODULE_BASE_PATH + plg_)
     threading.Thread(target=bot.run).start()
+
+    for plg_ in nonebot_sub_plugins:
+        nonebot_load_plugin(NONEBOT_SUB_MODULE_BASE_PATH + plg_)
